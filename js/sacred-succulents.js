@@ -4,7 +4,7 @@ console.log('I am working');
 let productItems = [
      {name: 'White Ursula',
      price: 7.99},
-     {name: 'Black Jeti',
+     {name: 'Black Vader',
      price: 7.99},
      {name: 'Yellow Armadillo',
      price: 7.99},
