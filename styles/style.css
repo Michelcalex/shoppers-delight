@@ -1292,23 +1292,35 @@ header {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: #4aa853;
-  max-width: 100%; }
+  background-color: #A2C5AC;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
   header::before, header::after {
     content: ' ';
     display: table; }
   header::after {
     clear: both; }
+  header #logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 40%; }
+    header #logo-container h1 {
+      font-family: "Lobster", cursive; }
+    header #logo-container #logo {
+      width: 15%; }
   header nav ul {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    margin: 0; }
-    header nav ul h1 {
-      font-family: "Lobster", cursive; }
+    justify-content: flex-end;
+    margin: 0;
+    font-family: "Fjalla One", sans-serif; }
     header nav ul li {
       list-style: none;
       padding: 10px 30px; }
+      header nav ul li a {
+        text-decoration: none; }
 
 main {
   max-width: 100% !important; }
@@ -1333,19 +1345,23 @@ main {
     max-width: 75rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%; }
+    max-width: 100%;
+    text-align: center; }
     main #content::before, main #content::after {
       content: ' ';
       display: table; }
     main #content::after {
       clear: both; }
+    main #content h2 {
+      font-family: "Lobster", cursive; }
     main #content #products-container {
       width: 75%;
       float: left;
       padding-left: 0.625rem;
       padding-right: 0.625rem;
-      border: 1px solid purple;
-      text-align: center; }
+      padding: 0px !important;
+      border-right: solid 1px lightgrey;
+      font-family: "Fjalla One", sans-serif; }
       @media screen and (min-width: 40em) {
         main #content #products-container {
           padding-left: 0.9375rem;
@@ -1353,7 +1369,9 @@ main {
       main #content #products-container:last-child:not(:first-child) {
         float: right; }
       main #content #products-container h2 {
-        font-family: "Lobster", cursive; }
+        background-color: #E2D4B7;
+        margin: 0;
+        padding: 20px 0px; }
       main #content #products-container .row-items {
         max-width: 75rem;
         margin-left: auto;
@@ -1376,21 +1394,28 @@ main {
               padding-right: 0.9375rem; } }
           main #content #products-container .row-items .items:last-child:not(:first-child) {
             float: right; }
-          @media screen and (min-width: 44.6875em) {
+          @media screen and (min-width: 46.875em) {
             main #content #products-container .row-items .items {
               width: 33.33333%;
               float: left;
               padding-left: 0.625rem;
               padding-right: 0.625rem; } }
-  @media screen and (min-width: 44.6875em) and (min-width: 40em) {
+  @media screen and (min-width: 46.875em) and (min-width: 40em) {
     main #content #products-container .row-items .items {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
-          @media screen and (min-width: 44.6875em) {
+          @media screen and (min-width: 46.875em) {
               main #content #products-container .row-items .items:last-child:not(:first-child) {
                 float: right; } }
           main #content #products-container .row-items .items img {
             max-width: 50%; }
+          main #content #products-container .row-items .items button {
+            background-color: #4B644A;
+            color: white;
+            padding: 10px;
+            border-radius: 5px; }
+          main #content #products-container .row-items .items button:hover {
+            background-color: #A2C5AC; }
     main #content #shopping-cart-container {
       width: 25%;
       float: left;

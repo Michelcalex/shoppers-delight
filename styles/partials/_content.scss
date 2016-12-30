@@ -4,14 +4,23 @@ main {
     #content{
         @include grid-row();
         max-width:100%;
+        text-align: center; 
+
+        h2 {
+            font-family: $font-primary-header;
+            }
         
         #products-container {
             @include grid-column(9);
-            border: 1px solid purple;
-            text-align: center; 
+            padding: 0px !important;
+            border-right: solid 1px lightgrey;
+            font-family: $font-primary;
+            
 
             h2 {
-                font-family: $font-primary-header;
+                background-color: #E2D4B7;
+                margin: 0;
+                padding: 20px 0px;
             }
 
             .row-items {
@@ -19,18 +28,27 @@ main {
 
                 .items {
                     @include grid-column(12);
-                    //border: 1px solid blue;
-                    
                     padding: 15px;
                     border-bottom: solid 1px lightgrey;
 
-                    @include breakpoint(715px) {
+                    @include breakpoint($large-screen) {
                         @include grid-column(4);
                     }
 
 
                     img {
                         max-width: 50%;
+                    }
+
+                    button {
+                        background-color: #4B644A;
+                        color: white;
+                        padding: 10px;
+                        border-radius: 5px;
+                    }
+
+                    button:hover {
+                        background-color: #A2C5AC;
                     }
 
                 }
@@ -40,6 +58,7 @@ main {
         #shopping-cart-container {
             @include grid-column(3);
             border: 1px solid red;
+
         }
     }
 }
