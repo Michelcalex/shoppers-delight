@@ -1,3 +1,10 @@
-h1 {
-    color: red;
-}
+@import '../../../../node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+
+
+@import 'partials/header';
+@import 'partials/hero';
+@import 'partials/content';

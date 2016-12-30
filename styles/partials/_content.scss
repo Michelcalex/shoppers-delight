@@ -1,0 +1,16 @@
+main {
+    @include grid-row();
+
+    #content{
+        @include grid-row();
+
+        #products-container {
+            @include grid-column(8);
+            border: 1px solid purple;
+        }
+
+        #shopping-cart-container {
+            @include grid-column(4);
+        }
+    }
+}
