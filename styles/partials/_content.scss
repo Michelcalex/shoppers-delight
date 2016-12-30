@@ -3,14 +3,43 @@ main {
 
     #content{
         @include grid-row();
-
+        max-width:100%;
+        
         #products-container {
-            @include grid-column(8);
+            @include grid-column(9);
             border: 1px solid purple;
+            text-align: center; 
+
+            h2 {
+                font-family: $font-primary-header;
+            }
+
+            .row-items {
+                @include grid-row();
+
+                .items {
+                    @include grid-column(12);
+                    //border: 1px solid blue;
+                    
+                    padding: 15px;
+                    border-bottom: solid 1px lightgrey;
+
+                    @include breakpoint(715px) {
+                        @include grid-column(4);
+                    }
+
+
+                    img {
+                        max-width: 50%;
+                    }
+
+                }
+            }
         }
 
         #shopping-cart-container {
-            @include grid-column(4);
+            @include grid-column(3);
+            border: 1px solid red;
         }
     }
 }

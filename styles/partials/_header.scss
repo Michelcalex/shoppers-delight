@@ -1,6 +1,7 @@
 header {
     @include grid-row();
     background-color: #4aa853;
+    max-width: 100%;
 
     nav {
 
@@ -9,6 +10,10 @@ header {
             align-items: center;
             justify-content: flex-start;
             margin: 0;
+
+            h1 {
+                font-family: $font-primary-header;
+            }
 
             li {
                 list-style: none;
