@@ -2,18 +2,25 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sacred Succulents</title>
+    <title>Plantastic Succulents</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lobster" rel="stylesheet">
     <link rel="icon" href="assets/favicon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="js/sacred-succulents.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="js/plantastic-succulents.js"></script>
+    <script id="merchandise-template" type="x-mustahe-template">
+        <img src="{{imgsrc}}"/>
+        <h3>{{productName}}</h3>
+        <p>{{productPrice}}</p>
+        <button>BUY</button>
+    </script>
 </head>
 <body>
     <header>
         <div id="logo-container">
             <img src="assets/succulent-logo.png" alt="sacred-succulent-logo" id="logo">
-            <h1>Sacred Succulents</h1>
+            <h1>Plantastic Succulents</h1>
         </div>
         <nav>
             <ul>   
@@ -28,75 +35,12 @@
         </section>
         <section id="content">
             <section id="products-container">
-                <!--Create these in the JS-->
-                <h2>Plantastic Succulents</h2>
-                <div class="row-items">
-                    <div class="items">
-                        <img src="assets/succulent-1.jpeg">
-                        <h3>White Ursula</h3>
-                        <p>$7.99</p>
-                        <button>Buy</button>
-                    </div> 
-                    <div class="items">
-                        <img src="assets/succulent-2.jpeg">
-                        <h3>Black Vader</h3>
-                        <p>$7.99</p>
-                        <button>Buy</button>
-                    </div>
-                    <div class="items">
-                        <img src="assets/succulent-3.jpeg">
-                        <h3>Yellow Armadillo</h3>
-                        <p>$7.99</p>
-                        <button>Buy</button>
-                    </div>
-                </div>
-                <div class="row-items">
-                    <div class="items">
-                        <img src="assets/succulent-4.jpeg">
-                        <h3>Navy Cati-sailor</h3>
-                        <p>$8.99</p>
-                        <button>Buy</button>
-                    </div>
-                    <div class="items">
-                        <img src="assets/succulent-5.jpeg">
-                        <h3>Wood Planti-pot</h3>
-                        <p>$10.99</p>
-                        <button>Buy</button>
-                    </div>
-                    <div class="items">
-                        <img src="assets/succulent-6.jpeg">
-                        <h3>Stone Jone</h3>
-                        <p>$9.99</p>
-                        <button>Buy</button>
-                    </div>
-                </div>
-                <div class="row-items">
-                    <div class="items">
-                        <img src="assets/succulent-7.jpeg">
-                        <h3>Wood Stumpy</h3>
-                        <p>$7.99</p>
-                        <button>Buy</button>
-                    </div>
-                    <div class="items">
-                        <img src="assets/succulent-8.jpeg">
-                        <h3>Stone Moon</h3>
-                        <p>$8.99</p>
-                        <button>Buy</button>
-                    </div>
-                    <div class="items">
-                        <img src="assets/succulent-9.jpeg">
-                        <h3>Stone Bloom</h3>
-                        <p>$10.99</p>
-                        <button>Buy</button>
-                    </div>
-                </div>
+                <h2>The Succtacular Collection</h2>   
             </section>
             <section id="shopping-cart-container">
                 <h2>Shopping Cart</h2>
             </section>
         </section>
     </main>
-    
-    
 </body>
 </html>
