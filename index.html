@@ -9,11 +9,16 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src="js/plantastic-succulents.js"></script>
-    <script id="merchandise-template" type="x-mustahe-template">
+    <script id="merchandise-template" type="x-mustache-template">
         <img src="{{imgsrc}}"/>
         <h3>{{productName}}</h3>
-        <p>{{productPrice}}</p>
-        <button>BUY</button>
+        <p>${{productPrice}}</p>
+        <button id="{{buttonId}}">BUY</button>
+    </script>
+    <script id="shopping-cart-template" type="x-mustache-template">
+        <img src="{{imgsrc}}"/>
+        <h3>{{productName}}</h3>
+        <p>${{productPrice}}</p>
     </script>
 </head>
 <body>

@@ -48,10 +48,13 @@ let productItems = [
 ]
 
 
+let cartItems=[];
+
 
 
 window.addEventListener('load', function() {
     showProducts();
+    buttons();
 });
 
 
@@ -73,9 +76,48 @@ function showProducts() {
 
         itemContainer.innerHTML = Mustache.render (
             document.querySelector('#merchandise-template').innerHTML, 
-            { imgsrc: productItems[i].img, productName: productItems[i].name, productPrice: productItems[i].price}
-            );
+            { imgsrc: productItems[i].img, productName: productItems[i].name, productPrice: productItems[i].price, buttonId: productItems[i].id}
+        );
 
         row.appendChild(itemContainer);
     }  
+}
+
+function buttons() {
+    let buyButtons = document.querySelectorAll('button');
+
+    // for (let i=0; i<buyButtons.length; i++) {
+    //     buyButtons[i].addEventListener('click', function(event) {
+    //         grabProductInfo(event.target);
+    //     });
+    // }
+
+    //forEach does the same thing as the for loop above. 
+    buyButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            let item = event.srcElement.id;
+            cartItems.push(productItems[item]);
+            showCart(cartItems);
+        });
+    });
+}
+
+
+function showCart() {
+    let shoppingCart = document.querySelector('#shopping-cart-container');
+
+    let shoppingCartItems = document.createElement('div');
+    shoppingCart.appendChild(shoppingCartItems);
+
+    for (let i=0; i < cartItems.length; i++) {
+
+        shoppingCartItems.innerHTML = Mustache.render (
+            document.querySelector('#shopping-cart-template').innerHTML, 
+            { imgsrc: cartItems[i].img, productName: cartItems[i].name, productPrice: cartItems[i].price}
+        );
+
+        shoppingCart.appendChild(shoppingCartItems);
+    }  
+
+    console.log(cartItems);
 }
