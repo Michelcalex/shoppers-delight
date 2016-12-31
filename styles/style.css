@@ -1307,7 +1307,9 @@ header {
     align-items: center;
     margin-right: 40%; }
     header #logo-container h1 {
-      font-family: "Lobster", cursive; }
+      font-family: "Lobster", cursive;
+      font-size: 2.2em;
+      color: #4B644A; }
     header #logo-container #logo {
       width: 15%; }
   header nav ul {
@@ -1320,7 +1322,10 @@ header {
       list-style: none;
       padding: 10px 30px; }
       header nav ul li a {
-        text-decoration: none; }
+        text-decoration: none;
+        color: black; }
+      header nav ul li a:hover {
+        color: #4B644A; }
 
 main {
   max-width: 100% !important; }
@@ -1346,22 +1351,35 @@ main {
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
-    text-align: center; }
+    text-align: center;
+    font-family: "Fjalla One", sans-serif; }
     main #content::before, main #content::after {
       content: ' ';
       display: table; }
     main #content::after {
       clear: both; }
     main #content h2 {
-      font-family: "Lobster", cursive; }
+      font-family: "Lobster", cursive;
+      font-size: 2em;
+      margin: 0;
+      padding: 20px 0px; }
+    main #content button {
+      background-color: #4B644A;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-transform: uppercase; }
+    main #content button:hover {
+      background-color: #89A894; }
+    main #content img {
+      max-width: 50%; }
     main #content #products-container {
       width: 75%;
       float: left;
       padding-left: 0.625rem;
       padding-right: 0.625rem;
       padding: 0px !important;
-      border-right: solid 1px lightgrey;
-      font-family: "Fjalla One", sans-serif; }
+      border-right: solid 1px lightgrey; }
       @media screen and (min-width: 40em) {
         main #content #products-container {
           padding-left: 0.9375rem;
@@ -1369,9 +1387,7 @@ main {
       main #content #products-container:last-child:not(:first-child) {
         float: right; }
       main #content #products-container h2 {
-        background-color: #E2D4B7;
-        margin: 0;
-        padding: 20px 0px; }
+        background-color: #E2D4B7; }
       main #content #products-container .row-items {
         max-width: 75rem;
         margin-left: auto;
@@ -1407,26 +1423,30 @@ main {
           @media screen and (min-width: 46.875em) {
               main #content #products-container .row-items .items:last-child:not(:first-child) {
                 float: right; } }
-          main #content #products-container .row-items .items img {
-            max-width: 50%; }
-          main #content #products-container .row-items .items button {
-            background-color: #4B644A;
-            color: white;
-            padding: 10px;
-            border-radius: 5px; }
-          main #content #products-container .row-items .items button:hover {
-            background-color: #A2C5AC; }
-    main #content #shopping-cart-container {
-      width: 25%;
-      float: left;
-      padding-left: 0.625rem;
-      padding-right: 0.625rem;
-      border: 1px solid red; }
-      @media screen and (min-width: 40em) {
-        main #content #shopping-cart-container {
-          padding-left: 0.9375rem;
-          padding-right: 0.9375rem; } }
-      main #content #shopping-cart-container:last-child:not(:first-child) {
-        float: right; }
+
+h2 {
+  background-color: #4B644A; }
+
+#shopping-cart-container {
+  width: 25%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  position: relative;
+  padding-bottom: 200px; }
+  @media screen and (min-width: 40em) {
+    #shopping-cart-container {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+  #shopping-cart-container:last-child:not(:first-child) {
+    float: right; }
+  #shopping-cart-container #total-info {
+    position: absolute;
+    bottom: 0px;
+    width: 95%; }
+    #shopping-cart-container #total-info button {
+      background-color: #DDDDDD; }
+    #shopping-cart-container #total-info button:hover {
+      background-color: #89A894; }
 
 /*# sourceMappingURL=style.css.map */

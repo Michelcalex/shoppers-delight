@@ -6,10 +6,21 @@
 
 $font-primary-header: 'Lobster', cursive;
 $font-primary: 'Fjalla One', sans-serif;
+$font-primary-color: black;
+$logo-primary-color: #4B644A;
 $large-screen: 750px;
+$primary-header-color: #A2C5AC;
+$secondary-header-color: #E2D4B7;
+$tertiary-header-color: #4B644A;
+$primary-border-color: lightgrey;
+$primary-btn-color: #4B644A;
+$secondary-btn-color: #DDDDDD;
+$hover-btn-color: #89A894;
+$hover-link-color: #4B644A;
 
 
 
 @import 'partials/header';
 @import 'partials/hero';
 @import 'partials/content';
+@import 'partials/shopping-cart';

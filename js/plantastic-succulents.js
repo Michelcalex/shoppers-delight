@@ -55,6 +55,7 @@ let cartItems=[];
 window.addEventListener('load', function() {
     showProducts();
     buttons();
+    showTotal();
 });
 
 
@@ -84,7 +85,7 @@ function showProducts() {
 }
 
 function buttons() {
-    let buyButtons = document.querySelectorAll('button');
+    let buyButtons = document.querySelectorAll('.buy-btn');
 
     // for (let i=0; i<buyButtons.length; i++) {
     //     buyButtons[i].addEventListener('click', function(event) {
@@ -120,4 +121,26 @@ function showCart() {
     }  
 
     console.log(cartItems);
+
+    let clearBtn = document.querySelector('#clear-btn');
+    clearBtn.addEventListener('click', function() {
+        shoppingCartItems.innerHTML='';
+    });
+}
+
+
+function showTotal() {
+    let totalInfo = document.querySelector('#total-info');
+
+    let subtotalAmount = document.createElement('p');
+    subtotalAmount.textContent= 'Subtotal: $0.00';
+    totalInfo.appendChild(subtotalAmount);
+
+    let taxAmount = document.createElement('p');
+    taxAmount.textContent= 'Tax: $0.00';
+    totalInfo.appendChild(taxAmount);
+
+    let totalAmount = document.createElement('p');
+    totalAmount.textContent= 'Total: $0.00';
+    totalInfo.appendChild(totalAmount);
 }
