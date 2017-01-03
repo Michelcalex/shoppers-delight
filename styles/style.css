@@ -1448,5 +1448,7 @@ h2 {
       background-color: #DDDDDD; }
     #shopping-cart-container #total-info button:hover {
       background-color: #89A894; }
+    #shopping-cart-container #total-info .total {
+      font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */

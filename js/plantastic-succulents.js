@@ -55,7 +55,7 @@ let cartItems=[];
 window.addEventListener('load', function() {
     showProducts();
     buttons();
-    showTotal();
+   // showTotal();
 });
 
 
@@ -87,6 +87,15 @@ function showProducts() {
 function buttons() {
     let buyButtons = document.querySelectorAll('.buy-btn');
 
+    let subtotalAmount = 0;
+    let taxAmount = 0;
+    let totalAmount = 0;
+    
+    let totalInfo = document.querySelector('#total-info');
+    let subtotal = document.createElement('p');
+    let tax = document.createElement('p');
+    let total = document.createElement('p');
+
     // for (let i=0; i<buyButtons.length; i++) {
     //     buyButtons[i].addEventListener('click', function(event) {
     //         grabProductInfo(event.target);
@@ -99,8 +108,30 @@ function buttons() {
             let item = event.srcElement.id;
             cartItems.push(productItems[item]);
             showCart(cartItems);
+
+            cartItems.forEach(function(shoppingItem){
+                console.log(shoppingItem.price);
+                subtotalAmount += shoppingItem.price;
+                taxAmount = subtotalAmount * (0.0475);
+                totalAmount = subtotalAmount + taxAmount;
+            });
+
+            
+            subtotal.textContent = 'Subtotal: $' + subtotalAmount.toFixed(2);
+            totalInfo.appendChild(subtotal);
+
+            tax.textContent= 'Tax: $' + taxAmount.toFixed(2); 
+            totalInfo.appendChild(tax);
+
+            total.classList.add('total');
+            total.textContent= 'Total: $' + totalAmount.toFixed(2); 
+            totalInfo.appendChild(total);
         });
     });
+
+
+   
+
 }
 
 
@@ -124,23 +155,19 @@ function showCart() {
 
     let clearBtn = document.querySelector('#clear-btn');
     clearBtn.addEventListener('click', function() {
-        shoppingCartItems.innerHTML='';
+        shoppingCartItems.innerHTML= '';
+        cartItems.length=0;
     });
 }
 
 
-function showTotal() {
-    let totalInfo = document.querySelector('#total-info');
+// function showTotal() {
+    
+//     let taxAmount = document.createElement('p');
+//     taxAmount.textContent= 'Tax: $0.00';
+//     totalInfo.appendChild(taxAmount);
 
-    let subtotalAmount = document.createElement('p');
-    subtotalAmount.textContent= 'Subtotal: $0.00';
-    totalInfo.appendChild(subtotalAmount);
-
-    let taxAmount = document.createElement('p');
-    taxAmount.textContent= 'Tax: $0.00';
-    totalInfo.appendChild(taxAmount);
-
-    let totalAmount = document.createElement('p');
-    totalAmount.textContent= 'Total: $0.00';
-    totalInfo.appendChild(totalAmount);
-}
+//     let totalAmount = document.createElement('p');
+//     totalAmount.textContent= 'Total: $0.00';
+//     totalInfo.appendChild(totalAmount);
+// }
